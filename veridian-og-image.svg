@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Fond -->
+  <rect width="1200" height="630" fill="#e6f2f2" />
+  
+  <!-- Logo et texte -->
+  <g transform="translate(150, 100)">
+    <!-- Titre principal -->
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#2c6161">
+      Votre site
+    </text>
+    <text x="0" y="130" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#2c6161">
+      commence ici,
+    </text>
+    <text x="0" y="210" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ff6e14">
+      gratuitement.
+    </text>
+    
+    <!-- Sous-titre -->
+    <text x="0" y="270" font-family="Arial, sans-serif" font-size="24" fill="#4a4a4a">
+      Transformez les visiteurs en ligne en clients réels
+    </text>
+    <text x="0" y="305" font-family="Arial, sans-serif" font-size="24" fill="#4a4a4a">
+      pour votre commerce
+    </text>
+    
+    <!-- Bouton -->
+    <rect x="0" y="340" width="300" height="60" rx="10" fill="#ff6e14" />
+    <text x="150" y="380" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">
+      Obtenir mon ébauche gratuite
+    </text>
+  </g>
+  
+  <!-- Illustration -->
+  <g transform="translate(770, 100)">
+    <rect x="0" y="0" width="300" height="300" rx="10" fill="#2c6161" />
+    <!-- Illustration simplifiée -->
+    <circle cx="150" cy="150" r="100" fill="#ff6e14" opacity="0.2" />
+    <circle cx="70" cy="80" r="40" fill="#ff9966" />
+    <circle cx="200" cy="120" r="35" fill="#66cccc" />
+    <circle cx="120" cy="210" r="45" fill="#4a8080" />
+  </g>
+  
+  <!-- Statistiques -->
+  <g transform="translate(150, 470)">
+    <!-- Première statistique -->
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#ff6e14">
+      76%
+    </text>
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="16" fill="#4a4a4a">
+      des consommateurs consultent internet
+    </text>
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="16" fill="#4a4a4a">
+      avant de se rendre en boutique
+    </text>
+    
+    <!-- Deuxième statistique -->
+    <text x="300" y="30" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#ff6e14">
+      68%
+    </text>
+    <text x="300" y="60" font-family="Arial, sans-serif" font-size="16" fill="#4a4a4a">
+      des recherches locales mènent à une
+    </text>
+    <text x="300" y="80" font-family="Arial, sans-serif" font-size="16" fill="#4a4a4a">
+      visite en magasin
+    </text>
+    
+    <!-- Troisième statistique -->
+    <text x="600" y="30" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#ff6e14">
+      +40%
+    </text>
+    <text x="600" y="60" font-family="Arial, sans-serif" font-size="16" fill="#4a4a4a">
+      de nouveaux clients pour les commerces
+    </text>
+    <text x="600" y="80" font-family="Arial, sans-serif" font-size="16" fill="#4a4a4a">
+      avec un site web
+    </text>
+  </g>
+  
+  <!-- Logo et navigation en haut -->
+  <g transform="translate(50, 50)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2c6161">
+      Veridian
+    </text>
+  </g>
+</svg>
