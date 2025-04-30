@@ -1,0 +1,15 @@
+// Cette image serait générée à partir du HTML, mais comme je ne peux pas générer directement un fichier PNG,
+// je vais créer un fichier texte qui explique comment générer l'image PNG à partir du HTML.
+// Pour un cas réel, il faudrait utiliser un service qui permet de transformer du HTML en image PNG.
+
+/*
+Instructions pour générer une image PNG à partir du fichier HTML:
+
+1. Ouvrez le fichier veridian-og-image.html dans un navigateur web
+2. Assurez-vous que la fenêtre du navigateur est redimensionnée à exactement 1200x630 pixels
+3. Utilisez l'outil de capture d'écran de votre système d'exploitation pour capturer la page complète
+4. Sauvegardez l'image au format PNG
+5. Hébergez cette image sur votre serveur ou utilisez un service d'hébergement d'images
+
+Cette image sera utilisée comme aperçu lorsque votre site sera partagé sur les réseaux sociaux.
+*/
