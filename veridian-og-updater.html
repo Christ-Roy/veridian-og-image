@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise à jour des métadonnées OpenGraph - Veridian</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            background-color: #2c6161;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .step {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .step:last-child {
+            border-bottom: none;
+        }
+        .step h2 {
+            color: #2c6161;
+            margin-top: 0;
+        }
+        button {
+            background-color: #ff6e14;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e05500;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .highlight {
+            background-color: #e2f0ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .preview {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .preview-header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .preview-content {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .preview-image {
+            width: 180px;
+            height: 94px;
+            background-color: #eee;
+            margin-right: 15px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+            background-image: url('https://raw.githubusercontent.com/Christ-Roy/veridian-og-image/main/veridian-og-final.png');
+        }
+        .preview-text {
+            flex: 1;
+        }
+        .preview-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .preview-description {
+            color: #666;
+            font-size: 14px;
+        }
+        .verification-tools {
+            margin-top: 30px;
+        }
+        .verification-tools a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #2c6161;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .verification-tools a:hover {
+            text-decoration: underline;
+        }
+        #results {
+            display: none;
+            margin-top: 30px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mise à jour des métadonnées OpenGraph pour Veridian</h1>
+        <p>Cet outil vous permet de mettre à jour facilement l'aperçu de votre site web lorsqu'il est partagé sur les réseaux sociaux</p>
+    </header>
+
+    <div class="container">
+        <div class="step">
+            <h2>Étape 1: Aperçu actuel vs nouvel aperçu</h2>
+            <p>Voici comment votre site apparaît actuellement lorsqu'il est partagé sur les réseaux sociaux :</p>
+            
+            <div class="preview">
+                <div class="preview-header">Aperçu actuel</div>
+                <div class="preview-content">
+                    <div class="preview-image" style="background-image: url('https://lovable.dev/opengraph-image-p98pqg.png');"></div>
+                    <div class="preview-text">
+                        <div class="preview-title">veridian-local-boost</div>
+                        <div class="preview-description">Lovable Generated Project</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Et voici comment il apparaîtra après la mise à jour :</p>
+            
+            <div class="preview">
+                <div class="preview-header">Nouvel aperçu</div>
+                <div class="preview-content">
+                    <div class="preview-image"></div>
+                    <div class="preview-text">
+                        <div class="preview-title">Veridian - Création de sites web pour commerces locaux</div>
+                        <div class="preview-description">Transformez les visiteurs en ligne en clients réels pour votre commerce. Votre site commence ici, gratuitement.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <h2>Étape 2: Installer les métadonnées OpenGraph</h2>
+            <p>Vous avez deux options pour installer les métadonnées OpenGraph :</p>
+            
+            <h3>Option 1: Installation temporaire (pour test)</h3>
+            <p>Cliquez sur le bouton ci-dessous pour installer temporairement les métadonnées OpenGraph sur cette page. Cela vous permettra de tester l'aperçu, mais les modifications ne seront pas permanentes.</p>
+            <button id="installTemporary">Installer temporairement</button>
+            <div id="tempSuccess" class="success-message">Installation temporaire réussie ! Les métadonnées sont maintenant actives sur cette page.</div>
+            
+            <h3>Option 2: Installation permanente (recommandé)</h3>
+            <p>Pour une installation permanente, vous devez ajouter le code suivant dans la section &lt;head&gt; de votre site web :</p>
+            <pre id="codeToInstall">&lt;!-- Métadonnées OpenGraph pour l'amélioration de l'aperçu sur les réseaux sociaux --&gt;
+&lt;meta property="og:title" content="Veridian - Création de sites web pour commerces locaux" /&gt;
+&lt;meta property="og:description" content="Transformez les visiteurs en ligne en clients réels pour votre commerce. Votre site commence ici, gratuitement." /&gt;
+&lt;meta property="og:type" content="website" /&gt;
+&lt;meta property="og:image" content="https://raw.githubusercontent.com/Christ-Roy/veridian-og-image/main/veridian-og-final.png" /&gt;
+&lt;meta property="og:url" content="http://veridian.site/" /&gt;
+
+&lt;!-- Métadonnées Twitter Card --&gt;
+&lt;meta name="twitter:card" content="summary_large_image" /&gt;
+&lt;meta name="twitter:title" content="Veridian - Création de sites web pour commerces locaux" /&gt;
+&lt;meta name="twitter:description" content="Transformez les visiteurs en ligne en clients réels pour votre commerce. Votre site commence ici, gratuitement." /&gt;
+&lt;meta name="twitter:image" content="https://raw.githubusercontent.com/Christ-Roy/veridian-og-image/main/veridian-og-final.png" /&gt;</pre>
+            <button id="copyCode">Copier le code</button>
+            <div id="copySuccess" class="success-message">Code copié dans le presse-papiers !</div>
+        </div>
+        
+        <div class="step">
+            <h2>Étape 3: Vérifier l'installation</h2>
+            <p>Une fois les métadonnées installées, vous pouvez vérifier qu'elles fonctionnent correctement en utilisant les outils suivants :</p>
+            
+            <div class="verification-tools">
+                <a href="https://developers.facebook.com/tools/debug/?q=http://veridian.site/" target="_blank">Validateur OpenGraph de Facebook</a>
+                <a href="https://cards-dev.twitter.com/validator" target="_blank">Validateur de cartes Twitter</a>
+                <a href="https://www.linkedin.com/post-inspector/inspect/" target="_blank">Inspecteur de liens LinkedIn</a>
+            </div>
+            
+            <div class="highlight">
+                <p><strong>Note importante :</strong> Les réseaux sociaux mettent en cache les métadonnées OpenGraph. Si vous ne voyez pas les changements immédiatement, utilisez l'option "Actualiser les informations" ou "Fetch new scrape information" dans les outils de validation.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="results" class="container">
+        <h2>Résultats de l'installation</h2>
+        <div id="resultsContent"></div>
+    </div>
+    
+    <footer>
+        <p>Outil développé pour Veridian | <a href="https://github.com/Christ-Roy/veridian-og-image" target="_blank">Code source sur GitHub</a></p>
+    </footer>
+
+    <script>
+        // Fonction pour installer temporairement les métadonnées OpenGraph
+        document.getElementById('installTemporary').addEventListener('click', function() {
+            // Configuration des métadonnées
+            const CONFIG = {
+                // Métadonnées OpenGraph standard
+                og: {
+                    title: "Veridian - Création de sites web pour commerces locaux",
+                    description: "Transformez les visiteurs en ligne en clients réels pour votre commerce. Votre site commence ici, gratuitement.",
+                    type: "website",
+                    image: "https://raw.githubusercontent.com/Christ-Roy/veridian-og-image/main/veridian-og-final.png",
+                    url: window.location.href.split("?")[0].split("#")[0], // URL de base sans paramètres ni ancres
+                },
+                // Métadonnées Twitter Card
+                twitter: {
+                    card: "summary_large_image",
+                    title: "Veridian - Création de sites web pour commerces locaux",
+                    description: "Transformez les visiteurs en ligne en clients réels pour votre commerce. Votre site commence ici, gratuitement.",
+                    image: "https://raw.githubusercontent.com/Christ-Roy/veridian-og-image/main/veridian-og-final.png",
+                }
+            };
+            
+            // Tableau pour stocker les actions effectuées
+            const actions = [];
+            
+            // Fonction pour créer ou mettre à jour une balise meta
+            function updateMetaTag(type, name, content) {
+                let selector = type === 'property' ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+                let meta = document.querySelector(selector);
+                
+                // Si la balise existe, mettre à jour son contenu
+                if (meta) {
+                    meta.setAttribute('content', content);
+                    return { action: 'updated', element: meta };
+                } 
+                // Sinon, créer une nouvelle balise
+                else {
+                    meta = document.createElement('meta');
+                    meta.setAttribute(type === 'property' ? 'property' : 'name', name);
+                    meta.setAttribute('content', content);
+                    document.head.appendChild(meta);
+                    return { action: 'created', element: meta };
+                }
+            }
+            
+            // Installation des métadonnées OpenGraph
+            for (const [key, value] of Object.entries(CONFIG.og)) {
+                actions.push({
+                    type: 'og',
+                    key: key,
+                    ...updateMetaTag('property', `og:${key}`, value)
+                });
+            }
+            
+            // Installation des métadonnées Twitter
+            for (const [key, value] of Object.entries(CONFIG.twitter)) {
+                actions.push({
+                    type: 'twitter',
+                    key: key,
+                    ...updateMetaTag('name', `twitter:${key}`, value)
+                });
+            }
+            
+            // Afficher le message de succès
+            document.getElementById('tempSuccess').style.display = 'block';
+            
+            // Journaliser le résultat dans la console
+            console.log('Métadonnées OpenGraph installées avec succès !', actions);
+            
+            // Générer un tableau de résultats
+            let resultsTable = '<table>';
+            resultsTable += '<thead><tr><th>Type</th><th>Propriété</th><th>Action</th></tr></thead><tbody>';
+            
+            actions.forEach(action => {
+                resultsTable += `
+                    <tr>
+                        <td>${action.type}</td>
+                        <td>${action.key}</td>
+                        <td class="${action.action}">${action.action}</td>
+                    </tr>
+                `;
+            });
+            
+            resultsTable += '</tbody></table>';
+            
+            // Afficher les résultats
+            document.getElementById('resultsContent').innerHTML = resultsTable;
+            document.getElementById('results').style.display = 'block';
+            
+            // Faire défiler vers les résultats
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Fonction pour copier le code dans le presse-papiers
+        document.getElementById('copyCode').addEventListener('click', function() {
+            const codeElement = document.getElementById('codeToInstall');
+            const textArea = document.createElement('textarea');
+            textArea.value = codeElement.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                const msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copying text command was ' + msg);
+                
+                // Afficher le message de succès
+                document.getElementById('copySuccess').style.display = 'block';
+                
+                // Masquer le message après 3 secondes
+                setTimeout(function() {
+                    document.getElementById('copySuccess').style.display = 'none';
+                }, 3000);
+            } catch (err) {
+                console.error('Oops, unable to copy', err);
+            }
+            
+            document.body.removeChild(textArea);
+        });
+    </script>
+</body>
+</html>
